@@ -1,0 +1,51 @@
+<html>
+<head>
+    <link rel='stylesheet' href="css/style.css" type="text/css">
+    <link rel='stylesheet' href="css/default.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<div id='contain'>
+    <h3>29) Program that asks user for a number and print countdown from that number to zero</h3>
+
+    <div class='code'>
+
+        <pre>
+            <code id="code" class='code1'>import time
+
+number = int(input("Enter a number : "))
+print(number)
+
+while(number >= 0):
+    print(number)
+    time.sleep(1)
+    number -= 1</code></pre>
+        <button class="btn" id="copyBtn" onclick="myFunction()" data-clipboard-target="#code">Copy Code</button></div>
+
+    <div id="comp"><a href="../python/compiler/index12.html">Open Compiler and Paste the Code</a></div>
+
+    <br>
+    <h3 id="output">Output</h3>
+
+    <div class="code">
+        <code class='code1'>
+            <pre>
+<img src="output/output29.png" width="500" height="250">
+            </pre>
+        </code>
+    </div>
+
+</div>
+<a id='backbtn' href='28.html'>Previous</a>
+<a id='fbtn2' href='30.html'>Next</a>
+
+<script src="js/highlight.pack.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script src="js/script.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Python Tutorial</string>
+
+    <string name="program">Programs</string>
+    <string name="compiler">Compiler</string>
+    <string name="project">GUI Projects</string>
+    <string name="about">About</string>
+
+    <string name="pte">Python Text Editor</string>
+    <string name="ppa">Python Paint Application</string>
+    <string name="pc">Python Calculator</string>
+    <string name="pppg">Python Ping Pong Game</string>
+    <string name="pdc">Python Digital Clock</string>
+
+    <string name="p1">Swapping of Two Numbers (Using Temporary Variable)</string>
+    <string name="p2">Swapping of Two Numbers Without Using a Temporary Variable</string>
+    <string name="p3">Check Whether a Number is Positive or Negative</string>
+    <string name="p4">Calculate the Average of Numbers in a Given List</string>
+    <string name="p5">Find the Sum of Digits in a Number</string>
+    <string name="p6">Find the Smallest Divisor of an Integer</string>
+    <string name="p7">Count the Number of Digits in a Number</string>
+    <string name="p8">Check if a Number is a Palindrome</string>
+    <string name="p9">Check Whether a Given Year is a Leap Year</string>
+    <string name="p10">Take the Temperature in Celcius and Convert it to Fahrenheit</string>
+    <string name="p11">Reverse a Given Number</string>
+    <string name="p12">Compute Prime Factors of an Integer</string>
+    <string name="p13">Generate all the Divisors of an Integer</string>
+    <string name="p14">Print Table of a Given Number</string>
+    <string name="p15">Check if a Number is a Perfect Number</string>
+    <string name="p16">Program to implement Merge Sort</string>
+    <string name="p17">Program to add two lists</string>
+    <string name="p18">Program to Reverse a String</string>
+    <string name="p19">Check if a Number is a Prime Number</string>
+    <string name="p20">Python Program to find sum of array</string>
+    <string name="p21">Program to check whether a given number is odd or even</string>
+    <string name="p22">Program to implement Linear Search</string>
+    <string name="p23">Python Program to add two matrices</string>
+    <string name="p24">Python Program to add two matrices</string>
+    <string name="p25">Python Program to multiply two matrices</string>
+    <string name="p26">Program to implement Quick Sort</string>
+    <string name="p27">Program to list even and odd list seperate from a given list</string>
+    <string name="p28">Program to count number of vowels using sets in given string</string>
+    <string name="p29">Program that asks user for a number and print countdown from that number to zero</string>
+    <string name="p30">Program to check whether a given character is alphabet, digit or special character</string>
+    <string name="help">Help</string>
+    <string name="newAccount">Create a new account</string>
+    <string name="fullName">Full Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="email">Email</string>
+    <string name="contact">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="choose_image">Choose Image</string>
+    <string name="register">Register</string>
+    <string name="alreadyAccount">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="title_activity_dash_board">DashBoardActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_about">About</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_logout">Logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile">Profile</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="new_user">New User? Register Now</string>
+    <string name="or">Or</string>
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

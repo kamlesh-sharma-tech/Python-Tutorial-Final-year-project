@@ -1,0 +1,96 @@
+<html>
+<head>
+    <link rel='stylesheet' href="css/style.css">
+    <link rel='stylesheet' href="css/default.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<div id='contain'>
+
+    <h2>Python Email Sender</h2>
+
+    <div class='code'>
+        <pre><code id="code" class='code1'>import smtplib as s
+from tkinter import *
+from tkinter import ttk,messagebox
+
+win = Tk()
+win.title("Email Sender")
+win.geometry("365x600")
+win.resizable(0,0)
+win.wm_iconbitmap('gmail.ico')
+win.configure(bg="orange")
+
+
+gmail = PhotoImage(file="email.png")
+email_image = Label(win,image=gmail,bg="orange")
+email_image.grid(row=0,column=0)
+
+subject_label = Label(win,text="Mail to",font=("Helvetica",12,'bold'),bg="orange")
+subject_label.grid(row=1,column=0,pady=(20,5))
+
+receiver_text = Entry(win,width=40 ,font=("Helvetica",12))
+receiver_text.grid(row=2,column=0)
+receiver_text.focus()
+
+subject_label = Label(win,text="Enter Subject",font=("Helvetica",12,'bold'),bg="orange")
+subject_label.grid(row=3,column=0,pady=(20,5))
+
+subject_text = Entry(win,width=40 ,font=("Helvetica",12))
+subject_text.grid(row=4,column=0)
+
+subject_label = Label(win,text="Enter Message",font=("Helvetica",12,'bold'),bg="orange")
+subject_label.grid(row=5,column=0,pady=(20,5))
+
+body_text = Text(win,width=40 ,font=("Helvetica",12),height=15)
+body_text.grid(row=6,column=0)
+
+send_btn = ttk.Button(win,text="Send",command = lambda : send())
+send_btn.grid(row=7,column=0,pady=20)
+
+
+def send():
+    con = s.SMTP('smtp.gmail.com',587)
+
+    con.starttls()
+
+    con.login("Your email id here","Your password here")
+
+    subject = subject_text.get()
+    body = body_text.get(1.0,END)
+    useremail = receiver_text.get()
+    if subject == "" or body == "" or useremail == "":
+        messagebox.showerror("Error","All input fields must be filled...Plz try again")
+    else:
+        message = f"Subject:{subject}\n\n{body}"
+
+        con.sendmail('Your email id here same as above',useremail,message)
+        messagebox.showinfo("Sent","Email sent successfully....")
+        con.quit()
+        win.destroy()
+
+win.mainloop()</code></pre>
+        <button class="btn" id="copyBtn" onclick="myFunction()" data-clipboard-target="#code">Copy Code</button></div>
+
+<br>
+    <h3>Output : </h3>
+    <div class="code">
+        <code class='code1'>
+            <pre>
+<img class="editor" src="email.png" alt="Clock" width="500" height="250">
+            </pre>
+        </code>
+    </div>
+
+</div>
+
+<script src="js/highlight.pack.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script src="js/script.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<html>
+<head>
+    <link rel='stylesheet' href="css/style.css">
+    <link rel='stylesheet' href="css/default.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<div id='contain'>
+
+    <h2>Python Paint Application</h2>
+
+    <div class='code'>
+        <pre><code id="code" class='code1'># Python Paint Application
+from tkinter import *
+from tkinter import ttk,Scale,messagebox,colorchooser,filedialog
+# import PIL.ImageGrab as ImageGrab
+# from PIL import Image, ImageTk
+import os
+
+class Paint:
+    def __init__(self,root):
+        self.root=root
+        self.root.title("Untitled ~ Paint")
+        self.root.geometry("900x600+260+100")
+        # self.root.wm_iconbitmap("icons/icon.ico")
+        self.root.resizable(0,0)
+        self.root.configure(background="white")
+
+        self.pen_color="black"
+
+        def newCanvas(event=None):
+            self.canvas_window.configure(bg="white")
+            self.canvas_window.delete('all')
+            self.root.title("Untitled ~ Paint")
+
+        def open_(event=None):
+            filename=filedialog.askopenfilename(initialdir=os.getcwd(),title="Select a File",
+            filetypes=(("Jpg Files","*.jpg"),("All Files","*.*")))
+            load = Image.open(filename)
+            render = ImageTk.PhotoImage(load)
+            img = Label(self.canvas_window, image=render)
+            img.image = render
+            img.place(x=0, y=0)
+
+        def save_(event=None):
+            try:
+                filename=filedialog.asksaveasfilename(defaultextension=".jpg")
+                x=self.root.winfo_rootx()+self.canvas_window.winfo_x()
+                y=self.root.winfo_rooty()+self.canvas_window.winfo_y()
+                x1=x+self.canvas_window.winfo_width()
+                y1=y+self.canvas_window.winfo_height()
+                ImageGrab.grab().crop((x,y,x1,y1)).save(filename)
+                self.root.title(os.path.basename(filename))
+                messagebox.showinfo("Success","Image saved at "+str(filename))
+            except:
+                messagebox.showerror("Error","Can't saved image, something went wrong try again!")
+
+        def eraser(event=None):
+            self.pen_color= "white"
+
+        def exitPaint(event=None):
+            exit=messagebox.askokcancel("Exit the Widow","Are you sure you want to exit the window?")
+            if exit==1:
+                self.root.destroy()
+
+        def aboutPaint(event=None):
+            aboutPaintWindow=Toplevel()
+            aboutPaintWindow.title("About Paint")
+            aboutPaintWindow.geometry("500x300+450+250")
+            aboutPaintWindow.resizable(False,False)
+            aboutPaintWindow.configure(bg="lightgray")
+
+            paint_icon=PhotoImage(file="icons/paint_icon.png")
+            paint_icon_label=Label(aboutPaintWindow,bg="lightgray",image=paint_icon)
+            paint_icon_label.pack()
+
+            basic_text=Label(aboutPaintWindow,wraplength=400,bg="lightgray",font=("",10),text="This is a simple paint application with all the basic functionalities that you need in a paint like draw some objects, and then erase it and change the color of the pen and adjust the size of the pen  etc.....")
+            basic_text.pack(pady=5)
+
+            creator_label=Label(aboutPaintWindow,text="Paint Application is created by Kamlesh Sharma",bg="lightgray",font=("Arial",15),fg="#003366")
+            creator_label.pack(pady=10)
+
+            exit_btn=ttk.Button(aboutPaintWindow,text="Exit",command=lambda:aboutPaintWindow.destroy())
+            exit_btn.pack()
+
+            aboutPaintWindow.mainloop()
+
+        def paint(event):
+            x1,y1=(event.x-2),(event.y-2)
+            x2,y2=(event.x + 2),(event.y + 2)
+            self.canvas_window.create_oval(x1,y1,x2,y2,fill=self.pen_color,outline=self.pen_color,width=self.pen_size.get())
+
+        def canvas_bg_color():
+            bg_canvas_color=colorchooser.askcolor()
+            self.canvas_window.configure(bg=bg_canvas_color[1])
+            # self.eraser_color=bg_canvas_color[1]
+
+        def select_color(col):
+            self.pen_color=col
+
+        main_menu=Menu(self.root)
+        # file menu
+        file=Menu(main_menu,tearoff=False)
+        file.add_command(label="New Canvas",accelerator="Ctrl + N",command=lambda:newCanvas())
+        file.add_command(label="Open",accelerator="Ctrl + O",command=lambda: open_())
+        file.add_command(label="Save",accelerator="Ctrl + S",command=lambda: save_())
+        file.add_command(label="Exit",accelerator="Ctrl + Q",command=lambda: exitPaint())
+
+        main_menu.add_cascade(label="File",menu=file)
+
+        # edit menu
+        edit=Menu(main_menu,tearoff=False)
+        edit.add_command(label="Clear All",accelerator="Ctrl + A",command=lambda : self.canvas_window.delete("all"))
+        edit.add_command(label="Eraser",accelerator="Ctrl + E",command=lambda: eraser())
+
+        main_menu.add_cascade(label="Edit",menu=edit)
+
+        # help menu
+        help=Menu(main_menu,tearoff=False)
+        help.add_command(label="About Paint",accelerator="Ctrl + P",command=lambda: aboutPaint())
+
+        main_menu.add_cascade(label="Help",menu=help)
+
+        # color window
+        self.color_frame=LabelFrame(self.root,text="Color",font=("Arial",13),bd=3,relief=RIDGE)
+        self.color_frame.place(x=0,y=0,width=78,height=220)
+
+        colors=["#ff0000","#ff4dd2","#ffff33","#000000","#0066ff","#660033","#4dff4d","#b300b3","#00ffff","#808080","#99ffcc","#ffffff"]
+        i=j=0
+        for color in colors:
+            Button(self.color_frame,bg=color,bd=2,relief=RIDGE,width=3,command=lambda col=color:select_color(col)).grid(row=i,column=j,padx=3,pady=3)
+            i+=1
+            if i==6:
+                i=0
+                j=1
+
+        # canvas background color button
+        self.canvas_color_button=ttk.Button(self.root,text="Canvas",command=lambda: canvas_bg_color())
+        self.canvas_color_button.place(x=0,y=230)
+
+        # scale widget for pen size and eraser
+        self.pen_size_frame=LabelFrame(self.root,text="Size",bd=3,relief=RIDGE,font=("Arial",13))
+        self.pen_size_frame.place(x=0,y=270,width=70,height=200)
+
+        self.pen_size=Scale(self.pen_size_frame,orient=VERTICAL,from_=50,to=0,length=170)
+        self.pen_size.set(1)
+        self.pen_size.grid(row=0,column=1,padx=8)
+
+        #creating a canvas window
+        self.canvas_window=Canvas(self.root,bg="white",bd=5,relief=RIDGE,height=560,width=800)
+        self.canvas_window.place(x=80,y=0)
+        self.canvas_window.bind("<B1-Motion>",paint)
+
+        # bind all menu with shortcut keys
+        self.root.bind("<Control-n>",newCanvas)
+        self.root.bind("<Control-s>",save_)
+        self.root.bind("<Control-q>",exitPaint)
+        self.root.bind("<Control-a>",aboutPaint)
+
+        self.root.configure(menu=main_menu)
+
+if __name__ == '__main__':
+    root=Tk()
+    p=Paint(root)
+
+    root.mainloop()</code></pre>
+        <button class="btn" id="copyBtn" onclick="myFunction()" data-clipboard-target="#code">Copy Code</button></div>
+
+    <br>
+    <h3>Output :</h3>
+    <div class="code">
+        <code class='code1'>
+            <pre>
+<img class="editor" src="paint.png" alt="Paint" width="500" height="250">
+            </pre>
+        </code>
+    </div>
+
+</div>
+
+<script src="js/highlight.pack.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script src="js/script.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+
+</html>

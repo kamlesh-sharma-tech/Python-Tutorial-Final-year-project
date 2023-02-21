@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/default.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div id='contain'>
+    <h3>6) Find the Smallest Divisor of an Integer  </h3>
+
+    <div class='code'>
+
+        <pre>
+            <code id="code" class='code1'>n=75
+a=[]
+for i in range(2,n+1):
+    if(n%i==0):
+        a.append(i)
+a.sort()
+print"Smallest divisor is:",a[0]</code></pre>
+        <button class="btn" id="copyBtn" onclick="myFunction()" data-clipboard-target="#code">Copy Code</button></div>
+
+        <div id="comp"><a href="../python/compiler/index12.html">Open Compiler and Paste the Code</a></div>
+
+        <br>
+        <h3>Output</h3>
+        <div class='code' >
+            <code class='code1'>
+        <pre>
+<img src="output/output6.png" width="500" height="250">
+</pre>
+            </code>
+        </div>
+        </div>
+            <br>
+            <a id='backbtn' href='5.html'>Previous</a>
+            <a id='fbtn2' href='7.html'>Next</a>
+
+<script src="js/highlight.pack.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script src="js/script.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

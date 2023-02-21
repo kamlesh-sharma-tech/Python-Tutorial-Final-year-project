@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@color/white"
+       android:orientation="vertical">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="250dp"
+           android:background="@drawable/python"/>
+
+       <GridLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:rowCount="2"
+           android:columnCount="2"
+           android:layout_marginBottom="10dp"
+           android:alignmentMode="alignMargins"
+           android:layout_gravity="center_horizontal"
+           android:columnOrderPreserved="false">
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/programsCardView"
+               android:layout_width="160dp"
+               android:layout_height="220dp"
+               app:cardCornerRadius="12dp"
+               app:cardElevation="5dp"
+               app:cardBackgroundColor="@color/darkGray"
+               android:layout_margin="10dp"
+               android:clickable="true"
+               android:focusable="true"
+               android:foreground="?android:selectableItemBackground">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:gravity="center">
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="90dp"
+                       android:src="@drawable/programslogo"
+                       android:layout_marginTop="10dp"/>
+
+                   <View
+                       android:layout_width="match_parent"
+                       android:layout_height="2dp"
+                       android:layout_margin="15dp"
+                       android:background="@color/white"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/program"
+                       android:textSize="20sp"
+                       android:textColor="@color/white"
+                       android:fontFamily="@font/ubuntu"/>
+
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/compilerCardView"
+               android:layout_width="160dp"
+               android:layout_height="220dp"
+               app:cardCornerRadius="12dp"
+               app:cardElevation="5dp"
+               app:cardBackgroundColor="@color/darkGray"
+               android:layout_margin="10dp"
+               android:clickable="true"
+               android:focusable="true"
+               android:foreground="?android:selectableItemBackground">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:gravity="center">
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="90dp"
+                       android:src="@drawable/compilerlogo"
+                       android:layout_marginTop="10dp"/>
+
+                   <View
+                       android:layout_width="match_parent"
+                       android:layout_height="2dp"
+                       android:layout_margin="15dp"
+                       android:background="@color/white"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/compiler"
+                       android:textSize="20sp"
+                       android:textColor="@color/white"
+                       android:fontFamily="@font/ubuntu"/>
+
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/projectsCardView"
+               android:layout_width="160dp"
+               android:layout_height="220dp"
+               app:cardCornerRadius="12dp"
+               app:cardElevation="5dp"
+               app:cardBackgroundColor="@color/darkGray"
+               android:layout_margin="10dp"
+               android:clickable="true"
+               android:focusable="true"
+               android:foreground="?android:selectableItemBackground">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:gravity="center">
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="90dp"
+                       android:src="@drawable/projectlogo"
+                       android:layout_marginTop="10dp"/>
+
+                   <View
+                       android:layout_width="match_parent"
+                       android:layout_height="2dp"
+                       android:layout_margin="15dp"
+                       android:background="@color/white"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/project"
+                       android:textSize="20sp"
+                       android:textColor="@color/white"
+                       android:fontFamily="@font/ubuntu"/>
+
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/aboutCardView"
+               android:layout_width="160dp"
+               android:layout_height="220dp"
+               app:cardCornerRadius="12dp"
+               app:cardElevation="5dp"
+               app:cardBackgroundColor="@color/darkGray"
+               android:layout_margin="10dp"
+               android:clickable="true"
+               android:focusable="true"
+               android:foreground="?android:selectableItemBackground">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:gravity="center">
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="90dp"
+                       android:src="@drawable/aboutlogo"
+                       android:layout_marginTop="10dp"/>
+
+                   <View
+                       android:layout_width="match_parent"
+                       android:layout_height="2dp"
+                       android:layout_margin="15dp"
+                       android:background="@color/white"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/about"
+                       android:textSize="20sp"
+                       android:textColor="@color/white"
+                       android:fontFamily="@font/ubuntu"/>
+
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/profileCardView"
+               android:layout_width="160dp"
+               android:layout_height="220dp"
+               app:cardCornerRadius="12dp"
+               app:cardElevation="5dp"
+               app:cardBackgroundColor="@color/darkGray"
+               android:layout_margin="10dp"
+               android:clickable="true"
+               android:focusable="true"
+               android:foreground="?android:selectableItemBackground">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:gravity="center">
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="90dp"
+                       android:src="@drawable/profile"
+                       android:layout_marginTop="10dp"/>
+
+                   <View
+                       android:layout_width="match_parent"
+                       android:layout_height="2dp"
+                       android:layout_margin="15dp"
+                       android:background="@color/white"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/profile"
+                       android:textSize="20sp"
+                       android:textColor="@color/white"
+                       android:fontFamily="@font/ubuntu"/>
+
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/logoutCardView"
+               android:layout_width="160dp"
+               android:layout_height="220dp"
+               app:cardCornerRadius="12dp"
+               app:cardElevation="5dp"
+               app:cardBackgroundColor="@color/darkGray"
+               android:layout_margin="10dp"
+               android:clickable="true"
+               android:focusable="true"
+               android:foreground="?android:selectableItemBackground">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:gravity="center">
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="90dp"
+                       android:src="@drawable/logout"
+                       android:layout_marginTop="10dp"/>
+
+                   <View
+                       android:layout_width="match_parent"
+                       android:layout_height="2dp"
+                       android:layout_margin="15dp"
+                       android:background="@color/white"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Log out"
+                       android:textSize="20sp"
+                       android:textColor="@color/white"
+                       android:fontFamily="@font/ubuntu"/>
+
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+
+       </GridLayout>
+
+   </LinearLayout>
+
+</ScrollView>

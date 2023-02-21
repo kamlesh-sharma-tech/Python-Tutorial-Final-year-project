@@ -1,0 +1,131 @@
+body{
+	margin:0px;
+    padding: 5px;
+	line-height:25px;
+	font-family: 'Raleway', 'Lato',sans-serif;
+	 overflow-x: none;
+    overflow-y: none;
+    text-overflow: none;
+    background-color:#c5cae9;
+}
+img{
+    width:100%;
+    height:40vh;
+	overflow-x: none;
+    overflow-y: none;
+    margin-left:2px;
+    margin-right:2px;
+}
+h2 {
+    color:#ef5350;
+    font-family: 'Raleway',sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 36px;
+    margin: 0 0 24px;
+    text-align: center;
+    text-decoration : underline; }
+h1{
+    color: #ee4c7c;
+	font-family: 'Lato';
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 32px;
+    margin: 0 0 18px;
+    text-shadow: 1px 0 0 #fff;
+    text-align: center;
+    text-decoration : underline;
+ }
+ h3{
+    text-decoration:underline;
+    color:green;
+ }
+ul{
+	list-style: decimal;
+	padding:10px;
+	margin:10px;
+}
+li{
+	padding:12px;
+	background:#eee;
+	border-bottom:1px solid black;
+	word-wrap: break-word;
+}
+#last-li{
+	border-bottom:0px solid red;
+}
+p {
+  text-align: justify;
+}
+a:hover { color: #1c1c1c; text-decoration: underline; }
+a:link,a:active,a:visited,a:hover
+{
+	text-decoration:none;
+	color:#c8c8c8;
+}
+#fbtn1{
+	width:30%;
+	padding:8px;
+	text-align:center;
+	background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
+	color:#fff;
+	float:left;
+    border-radius: 10px;
+	margin-bottom:10px;
+}
+#fbtn2{
+    background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
+	width:30%;
+	padding:8px;
+	text-align:center;
+	background-color:#009688;
+	color:#fff;
+	float:right;
+    border-radius: 10px;
+	margin-bottom:10px;
+}
+#backbtn{
+    background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
+	width:30%;
+	padding:8px;
+	text-align:center;
+	background-color:#009688;
+	color:#fff;
+	float:left;
+    border-radius: 10px;
+	margin-bottom:10px;
+}
+#fbtn2:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+#contain{
+	margin:5px 5px;
+	text-align:justify;
+}
+#pre{
+	width:100%;
+	margin:0px auto;
+	position:sticky;
+    -webkit-overflow-scrolling: touch;
+    display:block;
+    overflow: scroll;
+
+}
+#comp{
+	background-color: #ff4444;
+	color: white;
+	padding:2px;
+	border-radius:4px;
+}
+.btn{
+    background-color: #00c9b7;
+    border:1px solid black;
+    border-radius:50px;
+    outline:none;
+    padding:10px;
+    font-size:16px;
+    font-weight:500;
+}
+.btn:hover{
+    cursor:pointer;
+}

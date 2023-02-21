@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProjectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="1"
+            android:padding="6sp"
+            android:alignmentMode="alignMargins"
+            android:layout_gravity="center_horizontal"
+            android:columnOrderPreserved="false">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/textEditorCardView"
+                android:layout_width="match_parent"
+                android:layout_height="170sp"
+                app:cardCornerRadius="12sp"
+                app:cardElevation="5sp"
+                app:cardBackgroundColor="#4EBEF1"
+                android:layout_margin="5sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp"
+                        android:src="@drawable/texted"
+                        android:layout_marginTop="12sp">
+
+                    </ImageView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginTop="5sp"
+                        android:background="#606472">
+                    </View>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pte"
+                        android:textSize="18sp"
+                        android:textColor="@color/darkGray"
+                        android:layout_margin="10sp"
+                        android:fontFamily="@font/ubuntu"
+                        android:textStyle="bold"
+                        android:gravity="center">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/paintCardView"
+                android:layout_width="match_parent"
+                android:layout_height="170sp"
+                app:cardCornerRadius="12sp"
+                app:cardElevation="5sp"
+                app:cardBackgroundColor="#D77555"
+                android:layout_margin="5sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp"
+                        android:src="@drawable/paintpallete"
+                        android:layout_marginTop="12sp">
+
+                    </ImageView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginTop="5sp"
+                        android:background="#606472">
+                    </View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ppa"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/ubuntu"
+                        android:textColor="@color/darkGray"
+                        android:layout_margin="10sp"
+                        android:maxLines="3">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/calculatorCardView"
+                android:layout_width="match_parent"
+                android:layout_height="170sp"
+                app:cardCornerRadius="12sp"
+                app:cardElevation="5sp"
+                app:cardBackgroundColor="#4CAF50"
+                android:layout_margin="5sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp"
+                        android:src="@drawable/calculator"
+                        android:layout_marginTop="12sp">
+
+                    </ImageView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginTop="5sp"
+                        android:background="#606472">
+                    </View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pc"
+                        android:textSize="18sp"
+                        android:textColor="@color/darkGray"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/ubuntu"
+                        android:layout_margin="10sp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pingpongCardView"
+                android:layout_width="match_parent"
+                android:layout_height="170sp"
+                app:cardCornerRadius="12sp"
+                app:cardElevation="5sp"
+                app:cardBackgroundColor="#009688"
+                android:layout_margin="5sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp"
+                        android:src="@drawable/basketball"
+                        android:layout_marginTop="12sp">
+
+                    </ImageView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginTop="5sp"
+                        android:background="#606472">
+                    </View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pppg"
+                        android:textSize="18sp"
+                        android:textColor="@color/darkGray"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/ubuntu"
+                        android:layout_margin="10sp"
+                        android:maxLines="3"
+                        >
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/clockCardView"
+                android:layout_width="match_parent"
+                android:layout_height="170sp"
+                app:cardCornerRadius="12sp"
+                app:cardElevation="5sp"
+                app:cardBackgroundColor="#03A9F4"
+                android:layout_margin="5sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:selectableItemBackground"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp"
+                        android:src="@drawable/clock"
+                        android:layout_marginTop="12sp">
+
+                    </ImageView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginTop="5sp"
+                        android:background="#606472">
+                    </View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pdc"
+                        android:textSize="18sp"
+                        android:textColor="@color/darkGray"
+                        android:layout_margin="10sp"
+                        android:fontFamily="@font/ubuntu"
+                        android:textStyle="bold"
+                        android:maxLines="3"
+                        >
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mailCardView"
+                android:layout_width="match_parent"
+                android:layout_height="170sp"
+                app:cardCornerRadius="12sp"
+                app:cardElevation="5sp"
+                app:cardBackgroundColor="#E56D96"
+                android:layout_margin="5sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:selectableItemBackground"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp"
+                        android:src="@drawable/gmail"
+                        android:layout_marginTop="12sp">
+
+                    </ImageView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginTop="5sp"
+                        android:background="#606472">
+                    </View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Python Email Sender"
+                        android:textSize="18sp"
+                        android:textColor="@color/darkGray"
+                        android:layout_margin="10sp"
+                        android:fontFamily="@font/ubuntu"
+                        android:textStyle="bold"
+                        android:maxLines="3"
+                        >
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</ScrollView>
